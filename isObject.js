@@ -21,10 +21,14 @@
  * isObject(null)
  * // => false
  */
+
 /**
- * 判断传入的参数是否为'对象'
+ * isObject方法用来判断传入的参数是否为一个'对象'，若是则返回true，否则返回false
  */
 function isObject(value) {
   const type = typeof value;
+  // typeof null === 'object' 判断结果为true
   return value != null && (type == 'object' || type == 'function');
 }
+
+export default isObject;
